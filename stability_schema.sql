@@ -90,7 +90,7 @@ CREATE TABLE stability_whole_plan (
     condition               VARCHAR2(50),
     study_type              VARCHAR2(20),
     CONSTRAINT pk_stability_plan PRIMARY KEY (plan_id),
-    CONSTRAINT chk_study_type CHECK (study_type IN ('LONG_TERM','INTERMEDIATE','ACCELERATED','ONGOING'))
+    CONSTRAINT chk_study_type CHECK (study_type IN ('LONG_TERM','ACCELERATED','ONGOING'))
 );
 
 CREATE TABLE stability_audit_log (
