@@ -247,8 +247,7 @@ BEGIN
            last_login   = SYSDATE
     WHERE  user_id = v_user_id;
 
-    INSERT INTO login_audit_log (log_id, username, email, action, login_time)
-    VALUES (seq_login_log.NEXTVAL, UPPER(p_username), v_email, 'LOGIN', SYSDATE);
+  
     COMMIT;
 
     APEX_UTIL.SET_AUTHENTICATION_RESULT(0);
